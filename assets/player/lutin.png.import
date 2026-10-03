@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brfq3dc1lx64k"
-path="res://.godot/imported/home.png-febba487c00416088fddda501ff33536.ctex"
+uid="uid://dhkvb5csbb8v2"
+path="res://.godot/imported/lutin.png-e1b2bb019f5d6932eddc0d41aca9193a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/home.png"
-dest_files=["res://.godot/imported/home.png-febba487c00416088fddda501ff33536.ctex"]
+source_file="res://assets/player/lutin.png"
+dest_files=["res://.godot/imported/lutin.png-e1b2bb019f5d6932eddc0d41aca9193a.ctex"]
 
 [params]
 

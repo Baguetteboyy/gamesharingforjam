@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://eey65u0u6rio"]
 
-[ext_resource type="Script" uid="uid://dt0ncio0tix04" path="res://scenes/cookie.gd" id="1_2rrt0"]
-[ext_resource type="Texture2D" uid="uid://q2ithkmw0s5x" path="res://assets/cookie.png" id="2_2rrt0"]
+[ext_resource type="Script" uid="uid://dt0ncio0tix04" path="res://scripts/cookie.gd" id="1_2rrt0"]
+[ext_resource type="Texture2D" uid="uid://q2ithkmw0s5x" path="res://assets/Cookie/cookie.png" id="2_2rrt0"]
 [ext_resource type="PackedScene" uid="uid://cycctm5f3fuys" path="res://scenes/interactions/interaction_area/interaction_area.tscn" id="3_on5vl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_on5vl"]
@@ -99,7 +99,7 @@ script = ExtResource("1_2rrt0")
 sprite_frames = SubResource("SpriteFrames_2rrt0")
 animation = &"cookie"
 autoplay = "cookie"
-frame_progress = 0.3439894
+frame_progress = 0.07381892
 
 [node name="InteractionArea" parent="." unique_id=147314577 instance=ExtResource("3_on5vl")]
 action_name = "grab"

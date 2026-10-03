@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bqdqo15ijs0qn"]
+
+[ext_resource type="Script" uid="uid://bek5utn8xbthi" path="res://scenes/uppgrades.gd" id="1_4iccf"]
+[ext_resource type="FontFile" uid="uid://5ke4juidr06f" path="res://assets/ARCADECLASSIC.TTF" id="1_bgn6j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgn6j"]
+bg_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+
+[node name="Uppgrades" type="Control" unique_id=932676009]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4iccf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=768596493]
+
+[node name="Speed" type="Button" parent="." unique_id=380363991]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 48.0
+offset_right = 423.0
+offset_bottom = 237.0
+theme_override_fonts/font = ExtResource("1_bgn6j")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_bgn6j")
+text = "Speed:
+Add 20 to your speed"
