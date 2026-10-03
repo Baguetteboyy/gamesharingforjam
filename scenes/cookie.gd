@@ -5,6 +5,7 @@ extends Node2D
 @onready var cookie = $AnimatedSprite2D
 @onready var hey
 
+
 func _ready() -> void:
 	Interaction_area.interact = Callable(self, "on_interact")
 	
