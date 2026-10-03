@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cgf7k4ccnrch7"]
+
+[ext_resource type="Script" uid="uid://xvuxil7mabvg" path="res://scenes/interactions/interaction_manager.gd" id="1_j7k8f"]
+[ext_resource type="FontFile" uid="uid://5ke4juidr06f" path="res://assets/ARCADECLASSIC.TTF" id="2_in418"]
+
+[node name="InteractionManager" type="Node2D" unique_id=815986385]
+script = ExtResource("1_j7k8f")
+
+[node name="Label" type="Label" parent="." unique_id=930044355]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_right = 84.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_in418")
+theme_override_font_sizes/font_size = 4
+text = "[E or ctrl] to interact"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cb61vnvpbsa85"]
+
+[ext_resource type="Texture2D" uid="uid://bocs8cgetabnj" path="res://assets/wall.png" id="1_pw63i"]
+[ext_resource type="PackedScene" uid="uid://bljq2mmg3crsm" path="res://scenes/Player.tscn" id="2_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://eey65u0u6rio" path="res://scenes/cookie.tscn" id="3_7ykc4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pu3yx"]
+texture = ExtResource("1_pw63i")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_gubc5"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_pu3yx")
+
+[node name="Main scene" type="Node2D" unique_id=698446251]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1577173452]
+zoom = Vector2(7, 7)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=371114993]
+tile_set = SubResource("TileSet_gubc5")
+format = 2
+layer_0/tile_data = PackedInt32Array(196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 65540, 0, 1610612736, 4, 0, 1610612736, -65532, 0, 1610612736, -131068, 0, 1610612736, -196604, 0, 805306368, -131077, 0, 805306368, -131076, 0, 805306368, -131075, 0, 805306368, -131074, 0, 805306368, -131073, 0, 805306368, -196608, 0, 805306368, -196607, 0, 805306368, -196606, 0, 805306368, -196605, 0, 805306368, -65541, 0, 1342177280, -5, 0, 1342177280, 65531, 0, 1342177280, 131067, 0, 1342177280)
+
+[node name="Cookie" parent="." unique_id=1781473538 instance=ExtResource("3_7ykc4")]
+position = Vector2(35, 0)
+
+[node name="Player" parent="." unique_id=392974072 instance=ExtResource("2_7ykc4")]
+position = Vector2(-3, -1)

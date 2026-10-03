@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://eey65u0u6rio"]
+
+[ext_resource type="Script" uid="uid://dt0ncio0tix04" path="res://scenes/cookie.gd" id="1_2rrt0"]
+[ext_resource type="Texture2D" uid="uid://rlj4memhg5gh" path="res://assets/icon.svg" id="1_i5c4t"]
+[ext_resource type="PackedScene" uid="uid://cycctm5f3fuys" path="res://scenes/interactions/interaction_area/interaction_area.tscn" id="3_on5vl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yys3m"]
+atlas = ExtResource("1_i5c4t")
+region = Rect2(75, 50, 25, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2rrt0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yys3m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nc27e"]
+radius = 19.104973
+
+[node name="Cookie" type="Node2D" unique_id=1781473538]
+script = ExtResource("1_2rrt0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=764067590]
+sprite_frames = SubResource("SpriteFrames_2rrt0")
+
+[node name="InteractionArea" parent="." unique_id=147314577 instance=ExtResource("3_on5vl")]
+action_name = "grab"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1496405703]
+shape = SubResource("CircleShape2D_nc27e")
