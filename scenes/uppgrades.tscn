@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bqdqo15ijs0qn"]
 
-[ext_resource type="Script" uid="uid://bek5utn8xbthi" path="res://scenes/uppgrades.gd" id="1_4iccf"]
+[ext_resource type="Script" uid="uid://bek5utn8xbthi" path="res://scripts/uppgrades.gd" id="1_4iccf"]
 [ext_resource type="FontFile" uid="uid://5ke4juidr06f" path="res://assets/ARCADECLASSIC.TTF" id="1_bgn6j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgn6j"]
@@ -28,3 +28,10 @@ theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_bgn6j")
 text = "Speed:
 Add 20 to your speed"
+
+[node name="Label" type="Label" parent="." unique_id=1617199522]
+layout_mode = 0
+offset_left = -112.0
+offset_top = -164.0
+offset_right = 74.0
+offset_bottom = -97.0

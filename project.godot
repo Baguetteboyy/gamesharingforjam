@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 InteractionManager="*uid://cgf7k4ccnrch7"
+playerscript="*uid://nxviwlpsvavq"
 
 [file_customization]
 
