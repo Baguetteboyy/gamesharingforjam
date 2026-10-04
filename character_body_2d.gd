@@ -8,6 +8,10 @@ const speed = 40
 func _physics_process(delta: float) -> void:
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity =  dir * speed
+	if(player.position.x - position.x) < 0:
+		$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
 	move_and_slide()
 	
 func makepath() -> void:
@@ -15,3 +19,17 @@ func makepath() -> void:
 
 func _on_timer_timeout() -> void:
 	makepath()
+	
+	
+
+var enemyattack = false
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	enemyattack = true
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	enemyattack = false
+
+func _on_timer_2_timeout() -> void:
+	playerscript.health - 20
+	print(playerscript.health)

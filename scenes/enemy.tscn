@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://j24nj0onfd2s" path="res://assets/kid/kid.png" id="2_4ra3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
-size = Vector2(6, 9)
+size = Vector2(9, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4w8v"]
 atlas = ExtResource("2_4ra3w")
@@ -85,27 +85,43 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+size = Vector2(6, 9)
+
 [node name="Enemy" type="CharacterBody2D" unique_id=100309273]
 collision_mask = 3
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_md0e3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1865321331]
-position = Vector2(0, 3.5)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1865321331]
+position = Vector2(-0.5, 3.5)
 shape = SubResource("RectangleShape2D_5uy6h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1234056559]
 sprite_frames = SubResource("SpriteFrames_wtq4b")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.50176483
+animation = &"walk_side"
+autoplay = "walk_side"
 
 [node name="Timer" type="Timer" parent="." unique_id=1920314067]
-wait_time = 0.001
+wait_time = 0.1
 autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1316335999]
 debug_enabled = true
 
+[node name="Area2D" type="Area2D" parent="." unique_id=388982187]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=218285014]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_md0e3")
+
+[node name="Timer2" type="Timer" parent="." unique_id=1494674298]
+wait_time = 0.5
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
