@@ -3,8 +3,26 @@
 [ext_resource type="Script" uid="uid://bek5utn8xbthi" path="res://scripts/uppgrades.gd" id="1_4iccf"]
 [ext_resource type="FontFile" uid="uid://5ke4juidr06f" path="res://assets/ARCADECLASSIC.TTF" id="1_bgn6j"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4iccf"]
+bg_color = Color(0.36517376, 0.26040712, 0.2255671, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgn6j"]
-bg_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+bg_color = Color(0.3764706, 0.07058824, 0.07058824, 1)
+shadow_color = Color(0.11764706, 0.019607844, 0.019607844, 1)
+shadow_size = 1
+shadow_offset = Vector2(9, 9)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6w1sv"]
+bg_color = Color(0.28235295, 0.07058824, 0.07058824, 1)
+shadow_color = Color(0.047058824, 0.019607844, 0.019607844, 1)
+shadow_size = 1
+shadow_offset = Vector2(9, 9)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_607so"]
+bg_color = Color(0.14901961, 0.07058824, 0.07058824, 1)
+shadow_color = Color(0, 0.019607844, 0.019607844, 1)
+shadow_size = 1
+shadow_offset = Vector2(9, 9)
 
 [node name="Uppgrades" type="Control" unique_id=932676009]
 layout_mode = 3
@@ -14,6 +32,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4iccf")
+
+[node name="Panel" type="Panel" parent="." unique_id=992099677]
+layout_mode = 0
+offset_left = -610.0
+offset_top = -343.0
+offset_right = 576.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4iccf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=768596493]
 
@@ -26,12 +52,20 @@ offset_bottom = 237.0
 theme_override_fonts/font = ExtResource("1_bgn6j")
 theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_bgn6j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6w1sv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_607so")
 text = "Speed:
 Add 20 to your speed"
 
 [node name="Label" type="Label" parent="." unique_id=1617199522]
 layout_mode = 0
-offset_left = -112.0
-offset_top = -164.0
-offset_right = 74.0
-offset_bottom = -97.0
+offset_left = 235.0
+offset_top = -60.0
+offset_right = 421.0
+offset_bottom = 7.0
+theme_override_fonts/font = ExtResource("1_bgn6j")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Speed" to="." method="_on_speed_pressed"]
