@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://nxviwlpsvavq" path="res://scripts/node_2d.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bog48hhnkvaw1" path="res://assets/player/lutinplayer.png" id="2_3li8b"]
 [ext_resource type="Texture2D" uid="uid://dhkvb5csbb8v2" path="res://assets/player/lutin.png" id="2_v6fml"]
+[ext_resource type="Texture2D" uid="uid://ctah8gevquner" path="res://assets/player/lutinplayer(1).png" id="3_mdl7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
 size = Vector2(5, 8)
@@ -14,6 +15,22 @@ region = Rect2(48, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_qu4a1"]
 atlas = ExtResource("2_3li8b")
 region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3wef"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4126"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkdrv"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7iby"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(160, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3li8b"]
 atlas = ExtResource("2_v6fml")
@@ -50,6 +67,28 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3wef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4126")
+}],
+"loop": true,
+"name": &"WalkDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkdrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7iby")
+}],
+"loop": true,
+"name": &"WalkUp",
 "speed": 5.0
 }, {
 "frames": [{
@@ -98,6 +137,4 @@ shape = SubResource("RectangleShape2D_q6r6c")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=415271956 groups=["player"]]
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_0hol4")
-animation = &"grab"
-frame = 1
-frame_progress = 0.94246864
+animation = &"WalkDown"

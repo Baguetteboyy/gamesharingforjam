@@ -17,11 +17,11 @@ func player_movement():
 	if Input.is_action_pressed("opp"):
 		velocity.x = 0
 		velocity.y = -SPEED
-		#$AnimatedSprite2D.play("Walk")
+		#$AnimatedSprite2D.play("WalkUp")
 	elif Input.is_action_pressed("ned"):
 		velocity.x = 0
 		velocity.y = SPEED
-		#$AnimatedSprite2D.play("Walk")
+		#$AnimatedSprite2D.play("WalkDown")
 	elif Input.is_action_pressed("høyre"):
 		velocity.x = SPEED
 		velocity.y = 0
@@ -34,7 +34,7 @@ func player_movement():
 		#$AnimatedSprite2D.play("Walk")
 	elif Input.is_action_pressed("ta"):
 		#$AnimatedSprite2D.play("grab")
-		print("grab")
+		print("grabbed")
 	else:
 		velocity.x = 0
 		velocity.y = 0
