@@ -127,7 +127,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=392974072]
 position = Vector2(-2, -1)
-collision_mask = 6
+collision_mask = 7
 script = ExtResource("1_kpjcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=603035039]
