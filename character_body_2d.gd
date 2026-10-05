@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const speed = 40
+var health = 100
 
 @export var player: Node2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
@@ -19,8 +20,6 @@ func makepath() -> void:
 
 func _on_timer_timeout() -> void:
 	makepath()
-	
-	
 
 var enemyattack = false
 
@@ -31,5 +30,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	enemyattack = false
 
 func _on_timer_2_timeout() -> void:
-	playerscript.health - 20
-	print(playerscript.health)
+	if health >= 1:
+		health = health - 20
+		print(health)
+	else:
+		health = 0
+		playerscript.level = playerscript.level +1

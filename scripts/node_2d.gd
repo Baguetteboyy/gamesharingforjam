@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 var SPEED = 70
 var level = 1
-var health = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +17,7 @@ func player_movement():
 	if Input.is_action_pressed("opp"):
 		velocity.x = 0
 		velocity.y = -SPEED
+		$AudioStreamPlayer2D.play()
 		#$AnimatedSprite2D.play("WalkUp")
 	elif Input.is_action_pressed("ned"):
 		velocity.x = 0
@@ -41,3 +41,4 @@ func player_movement():
 		velocity.y = 0
 		#$AnimatedSprite2D.play("idle")
 	move_and_slide()
+	

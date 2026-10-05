@@ -14,8 +14,9 @@ func _process(delta: float) -> void:
 
 
 func _on_speed_pressed() -> void:
-	playerscript.SPEED = playerscript.SPEED + 20
-	if playerscript.level == 1:
-		get_tree().change_scene_to_file("res://scenes/levels/level2.tscn")
-	elif playerscript.level == 2:
+	if playerscript.level == 2:
+		playerscript.SPEED = playerscript.SPEED + 20
+		get_tree().change_scene_to_file("res://scenes/interactions/levels/level2.tscn")
+		print("level2")
+	elif playerscript.level == 3:
 		print("level3")

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bog48hhnkvaw1" path="res://assets/player/lutinplayer.png" id="2_3li8b"]
 [ext_resource type="Texture2D" uid="uid://dhkvb5csbb8v2" path="res://assets/player/lutin.png" id="2_v6fml"]
 [ext_resource type="Texture2D" uid="uid://ctah8gevquner" path="res://assets/player/lutinplayer(1).png" id="3_mdl7e"]
+[ext_resource type="AudioStream" uid="uid://c4vtu422bo4g5" path="res://assets/freesound_community-walking-on-wooden-floor-97002.mp3" id="5_qu4a1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
 size = Vector2(5, 8)
@@ -138,3 +139,6 @@ shape = SubResource("RectangleShape2D_q6r6c")
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_0hol4")
 animation = &"WalkDown"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1905217512]
+stream = ExtResource("5_qu4a1")
