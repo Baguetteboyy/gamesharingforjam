@@ -1,5 +1,5 @@
 extends Node2D
-
+#Veldig hyggelig spill Leonard
 var level = 1
 
 @onready var Interaction_area: InteractionArea = $InteractionArea
